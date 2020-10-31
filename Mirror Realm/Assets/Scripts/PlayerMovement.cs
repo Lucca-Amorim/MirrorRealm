@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour{
 	PlayerControl controller;
     float horizontalMove = 0f;
     bool jump = false;
+    public bool inversao;
 	
     void Start() {
         controller = gameObject.GetComponent<PlayerControl>();
@@ -23,11 +24,9 @@ public class PlayerMovement : MonoBehaviour{
 	}
 
 	void FixedUpdate(){
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false ,jump);
+        if(!inversao) controller.Move(horizontalMove * Time.fixedDeltaTime, false ,jump);
+        else controller.Move((-1 * horizontalMove) * Time.fixedDeltaTime, false ,jump);
 		jump = false;
     }
-
-
-
 
 }

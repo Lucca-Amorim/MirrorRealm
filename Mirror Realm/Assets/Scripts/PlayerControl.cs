@@ -30,11 +30,9 @@ public class PlayerControl : MonoBehaviour{
 
 	private void Awake(){
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
-
 		if(OnLandEvent == null){
 			OnLandEvent = new UnityEvent();
         }
-
 	}
 
 	private void FixedUpdate(){
@@ -65,7 +63,8 @@ public class PlayerControl : MonoBehaviour{
 		}
 		if (m_Grounded && jump){
 			m_Grounded = false;
-			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			//m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			m_Rigidbody2D.AddRelativeForce(new Vector2(0f, m_JumpForce));
 		}
 	}
 
