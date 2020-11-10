@@ -8,11 +8,14 @@ using UnityEngine.Events;
 public class PlayerControl : MonoBehaviour{
 
 	[SerializeField] public float m_JumpForce = 400f;							// Amount of force added when the player jumps.
+	public float velQueda = 2.5f;
+
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
 
+	Animator anim;
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	private Rigidbody2D m_Rigidbody2D;
@@ -30,11 +33,17 @@ public class PlayerControl : MonoBehaviour{
 
 	private void Awake(){
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 		if(OnLandEvent == null){
 			OnLandEvent = new UnityEvent();
         }
 	}
 
+	void Update(){
+		if(m_Rigidbody2D.velocity.y <0){
+			m_Rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (velQueda - 1) * Time.deltaTime;
+		}
+	}
 	private void FixedUpdate(){
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
@@ -43,6 +52,7 @@ public class PlayerControl : MonoBehaviour{
 		for (int i = 0; i < colliders.Length; i++){
 			if (colliders[i].gameObject != gameObject){
 				m_Grounded = true;
+				anim.SetBool("Jump", false);
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
 			}
@@ -50,7 +60,7 @@ public class PlayerControl : MonoBehaviour{
 	}
 
 
-	public void Move(float move, bool crouch ,bool jump){
+	public void Move(float move, bool crouch, bool jump){
 		if(m_Grounded || m_AirControl){
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
@@ -65,6 +75,7 @@ public class PlayerControl : MonoBehaviour{
 			m_Grounded = false;
 			//m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 			m_Rigidbody2D.AddRelativeForce(new Vector2(0f, m_JumpForce));
+			
 		}
 	}
 
