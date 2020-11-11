@@ -33,7 +33,21 @@ namespace Pathfinding {
 
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () {
-			if (target != null && ai != null) ai.destination = target.position;
+            float distance = Vector2.Distance (transform.position, target.position);
+            if (target != null && ai != null)
+            {
+                if(distance <= 15)
+                {
+                    ai.destination = target.position;
+                }
+            }
 		}
-	}
+
+        void OnDrawGizmosSelected()
+        {
+            // Draw a yellow sphere at the transform's position
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, 15);
+        }
+    }
 }

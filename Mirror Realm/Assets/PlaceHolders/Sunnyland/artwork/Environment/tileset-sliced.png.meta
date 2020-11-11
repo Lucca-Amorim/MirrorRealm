@@ -429,7 +429,19 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   spritePixelsToUnits: 8
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  spritePixelsToUnits: 5.3
+=======
+  spritePixelsToUnits: 8
+>>>>>>> 54a253c1f53858cae451ee485df2360cdd4c6601
+=======
+  spritePixelsToUnits: 8
+>>>>>>> 54a253c1f53858cae451ee485df2360cdd4c6601
+>>>>>>> Stashed changes
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
