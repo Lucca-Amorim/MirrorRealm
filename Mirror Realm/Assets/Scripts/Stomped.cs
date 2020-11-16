@@ -36,6 +36,7 @@ public class Stomped : MonoBehaviour
     {
         if(stomped == true)
         {
+            SoundManagerScript.PlaySound("enemyHit");
             Destroy(transform.parent.gameObject);
         }
     }

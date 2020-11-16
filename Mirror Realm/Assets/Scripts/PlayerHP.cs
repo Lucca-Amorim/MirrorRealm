@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHP : MonoBehaviour
 {
-    int hP = 3;
+    public int hP = 3;
 
     float timer;
     bool invencible = false;
@@ -12,6 +12,7 @@ public class PlayerHP : MonoBehaviour
     Material mWhite;
     Material mDefault;
     SpriteRenderer sRend;
+    public PauseMenu pauseMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +32,7 @@ public class PlayerHP : MonoBehaviour
         }
         if (hP <= 0)
         {
-            Time.timeScale = 0;
-            Debug.Log("Morri");
+            pauseMenu.GameOver();
         }
     }
 
@@ -42,6 +42,19 @@ public class PlayerHP : MonoBehaviour
         {
             Hurt();
             --hP;
+
+            switch (hP)
+            {
+                case 2:
+                    SoundManagerScript.PlaySound("playerHit");
+                    break;
+                case 1:
+                    SoundManagerScript.PlaySound("playerHit2");
+                    break;
+                case 0:
+                    SoundManagerScript.PlaySound("playerDeath");
+                    break;
+            }
         }
     }
 

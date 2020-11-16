@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour{
 	void Update(){
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         if(Input.GetButtonDown("Jump")){
+            SoundManagerScript.PlaySound("jump");
             jump = true;
             animator.SetBool("Jump", true);
         }

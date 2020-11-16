@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
     public static bool isGamePaused = false;
 
     [SerializeField] GameObject pauseMenu;
+    public GameObject gameOverMenu;
+    public PlayerHP playerHP; 
 
     void Update()
     {
@@ -47,5 +49,19 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quit");
+    }
+
+    public void GameOver()
+    {
+        gameOverMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void TryAgain()
+    {
+        gameOverMenu.SetActive(false);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        playerHP.hP = 3;
     }
 }
