@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5192753042166867812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 43.66, y: 32.23, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5192753042786720365}
   - {fileID: 6399064669376291193}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 86ca59b9bca0e409b9ba2784fbe69f01, type: 3}
+  m_Sprite: {fileID: 368543389579951487, guid: 64c555e1ecfac094a973dc5d19bb77c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,18 +135,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.005116105, y: -0.013159912}
+  m_Offset: {x: -0.0051164627, y: 0.052221537}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.35, y: 0.32}
+    oldSize: {x: 2.74, y: 2.82}
     newSize: {x: 0.35, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26960307, y: 0.200102}
+  m_Size: {x: 2.949688, y: 2.8153849}
   m_EdgeRadius: 0
 --- !u!1 &5192753042786720364
 GameObject:
@@ -172,7 +172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5192753042786720364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15399991, y: -0.0829999, z: 0}
+  m_LocalPosition: {x: 1.59, y: -1.22, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 5192753042166867814}
@@ -223,7 +223,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0067968145, y: 0.0909002}
+  m_Offset: {x: -0.08850622, y: 1.3985412}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -234,7 +234,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2878831, y: 0.0325478}
+  m_Size: {x: 3.0660238, y: 0.22869396}
   m_EdgeRadius: 0
 --- !u!114 &1820034164827667881
 MonoBehaviour:
@@ -248,4 +248,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17416512e66478848bd56acfa0a74b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 5
+  force: 1500

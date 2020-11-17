@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\EnemyGFX.cs" />
+    <Compile Include="Assets\Scripts\Freeze.cs" />
     <Compile Include="Assets\Scripts\Paralelo.cs" />
     <Compile Include="Assets\Scripts\Patrol.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
@@ -71,9 +72,9 @@
     <Compile Include="Assets\Scripts\PlayerHP.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\Scripts\SoundManagerScript.cs" />
     <Compile Include="Assets\Scripts\Stomped.cs" />
     <Compile Include="Assets\Scripts\offMap.cs" />
-    <Compile Include="Assets\SoundManagerScript.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

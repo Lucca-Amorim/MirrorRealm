@@ -26,8 +26,6 @@ public class Stomped : MonoBehaviour
             Rigidbody2D playerRb = trigger.transform.parent.gameObject.GetComponent<Rigidbody2D>();
             playerRb.AddForce(Vector2.up * force);
             stomped = true;
-            /*BoxCollider2D boxCollider = transform.parent.gameObject.GetComponent<BoxCollider2D>();
-            boxCollider.enabled = false;*/
             Destroy();
         }
     }
