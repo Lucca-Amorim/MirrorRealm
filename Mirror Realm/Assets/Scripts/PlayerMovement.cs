@@ -13,11 +13,17 @@ public class PlayerMovement : MonoBehaviour{
     bool jump = false;
     public bool inversao;
     Animator animator;
-	
+
+    [Space]
+    [Header("da outra classe:")]
+	public Following queda;
+    public quedaTeste segue;
+    float tempo = -10;
     void Awake() {
         controller = gameObject.GetComponent<PlayerControl>();
         animator = GetComponent<Animator>();
     }
+
 	void Update(){
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         if(Input.GetButtonDown("Jump")){
@@ -25,11 +31,12 @@ public class PlayerMovement : MonoBehaviour{
             jump = true;
             animator.SetBool("Jump", true);
         }
-        if(horizontalMove !=0){
+        if(horizontalMove != 0){
             animator.SetBool("Run", true);
         }else{
             animator.SetBool("Run", false);
         }
+        tempo -= Time.deltaTime * 2;
         
 	}
 
@@ -46,6 +53,18 @@ public class PlayerMovement : MonoBehaviour{
             animator.SetBool("Run", false);
         }
 		jump = false;
+    }
+
+    void OnCollisionEnter2D(Collision2D other) {
+        if(other.collider.CompareTag("Trigger")){
+            if(tempo < 0){
+                queda.mover = !queda.mover;
+                segue.comeco = !segue.comeco;
+                Debug.Log("Comecou");
+                tempo = 15f;
+            }
+
+        }
     }
 
 }
