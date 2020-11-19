@@ -35,7 +35,7 @@ public class Freeze : MonoBehaviour
     {
         if(freeze == true)
         {
-            SoundManagerScript.PlaySound("enemyHit");
+            SoundManagerScript.PlaySound("robotHit");
             patrol.speed = 0;
             yield return new WaitForSeconds(3);
             patrol.speed = 8;

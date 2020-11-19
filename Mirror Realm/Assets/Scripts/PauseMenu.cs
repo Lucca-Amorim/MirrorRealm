@@ -8,9 +8,11 @@ public class PauseMenu : MonoBehaviour
     public static bool isGamePaused = false;
 
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject player;
     public GameObject gameOverMenu;
-    public PlayerHP playerHP; 
-
+    public PlayerHP playerHP;
+    public Following following;
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -63,5 +65,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         playerHP.hP = 3;
+        following.transform.position = player.transform.position;
     }
 }

@@ -22,6 +22,7 @@ public class quedaTeste : MonoBehaviour{
             if(tempo < 0){
                 trocaPrefab();
                 GameObject apagar = Instantiate(Obj, transform.position, Quaternion.identity);
+                SoundManagerScript.PlaySound("houseFalling");
                 Destroy(apagar, 10f);
                 tempo = 0.6f;
             }
