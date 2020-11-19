@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Invertido Runner.unity
+- path: Assets/Scenes/Fase para Testes.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
