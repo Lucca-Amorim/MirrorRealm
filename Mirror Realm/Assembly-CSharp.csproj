@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\EnemyGFX.cs" />
     <Compile Include="Assets\Scripts\Following.cs" />
+    <Compile Include="Assets\Scripts\Fragmento.cs" />
     <Compile Include="Assets\Scripts\Freeze.cs" />
     <Compile Include="Assets\Scripts\Paralelo.cs" />
     <Compile Include="Assets\Scripts\Patrol.cs" />

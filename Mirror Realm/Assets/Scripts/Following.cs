@@ -17,7 +17,7 @@ public class Following : MonoBehaviour{
             transform.position = new Vector3(transform.position.x, player.transform.position.y , 0f);
             transform.position += new Vector3(Time.deltaTime * 12f, 0f, 0f);
 
-            if(transform.position.x - 50 > player.transform.position.x)
+            if(transform.position.x - 30 > player.transform.position.x)
             {
                 pauseMenu.GameOver();
             }
