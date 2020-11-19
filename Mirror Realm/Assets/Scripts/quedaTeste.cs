@@ -12,7 +12,7 @@ public class quedaTeste : MonoBehaviour{
     public GameObject Arvore;
 
     GameObject Obj;
-    float tempo = 0.4f;
+    float tempo = 0.6f;
 
     public bool comeco = false;
 
@@ -23,7 +23,7 @@ public class quedaTeste : MonoBehaviour{
                 trocaPrefab();
                 GameObject apagar = Instantiate(Obj, transform.position, Quaternion.identity);
                 Destroy(apagar, 10f);
-                tempo = 0.4f;
+                tempo = 0.6f;
             }
             tempo -= Time.deltaTime;
         }

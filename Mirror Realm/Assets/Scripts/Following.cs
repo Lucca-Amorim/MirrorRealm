@@ -13,7 +13,7 @@ public class Following : MonoBehaviour{
     void Update(){
         if(mover){
             transform.position = new Vector3(transform.position.x, player.transform.position.y , 0f);
-            transform.position += new Vector3(Time.deltaTime * 15f, 0f, 0f);
+            transform.position += new Vector3(Time.deltaTime * 12f, 0f, 0f);
         }else{
             transform.position = player.transform.position;
         }

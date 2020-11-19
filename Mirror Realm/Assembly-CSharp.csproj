@@ -61,6 +61,8 @@
      <Compile Include="Assets\Scripts\offMap.cs" />
      <Compile Include="Assets\Scripts\quedaTeste.cs" />
      <Compile Include="Assets\Scripts\testeeee.cs" />
+     <Compile Include="Assets\dialogo.cs" />
+     <Compile Include="Assets\fechaDialogo.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
