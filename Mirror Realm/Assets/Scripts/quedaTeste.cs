@@ -12,7 +12,7 @@ public class quedaTeste : MonoBehaviour{
     public GameObject Arvore;
 
     GameObject Obj;
-    float tempo = 0.6f;
+    float tempo = 0.74f;
 
     public bool comeco = false;
 
@@ -24,7 +24,7 @@ public class quedaTeste : MonoBehaviour{
                 GameObject apagar = Instantiate(Obj, transform.position, Quaternion.identity);
                 SoundManagerScript.PlaySound("houseFalling");
                 Destroy(apagar, 10f);
-                tempo = 0.6f;
+                tempo = 0.74f;
             }
             tempo -= Time.deltaTime;
         }

@@ -38,7 +38,7 @@ public class SoundManagerScript : MonoBehaviour
                 audioSrc.PlayOneShot(dano2Sound);
                 break;
             case "jump":
-                audioSrc.PlayOneShot(jumpSound);
+                //audioSrc.PlayOneShot(jumpSound);
                 break;
             case "enemyHit":
                 audioSrc.PlayOneShot(enemyDeathSound);
