@@ -15,7 +15,7 @@ public class Paralelo : MonoBehaviour{
 
     void Start() {
         tamanho = foto.GetComponent<SpriteRenderer>().bounds.size.x;
-        Debug.Log(tamanho);
+        //Debug.Log(tamanho);
         bgY = bg1.transform.position.y;
         bgZ = bg1.transform.position.z;
         bg1.transform.position = new Vector3(bg1.transform.position.x + tamanho, bgY, bgZ);

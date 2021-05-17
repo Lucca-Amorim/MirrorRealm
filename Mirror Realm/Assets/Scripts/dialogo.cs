@@ -27,9 +27,5 @@ public class dialogo : MonoBehaviour{
             }
         }
         if(!termino)tempo -= Time.deltaTime;
-
-        Debug.Log(tempo);
-
-
     }
 }

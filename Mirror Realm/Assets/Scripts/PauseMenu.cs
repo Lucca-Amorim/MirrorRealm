@@ -13,18 +13,17 @@ public class PauseMenu : MonoBehaviour
     public PlayerHP playerHP;
     public Following following;
     
+
+    void Start(){
+        Time.timeScale = 1f;
+        isGamePaused = false;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isGamePaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
+            if(isGamePaused) ResumeGame();
+            else PauseGame();
         }
     }
 
@@ -67,4 +66,9 @@ public class PauseMenu : MonoBehaviour
         playerHP.hP = 3;
         following.transform.position = player.transform.position;
     }
+
+
+    
+
+
 }

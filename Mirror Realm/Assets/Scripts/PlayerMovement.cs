@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour{
 	PlayerControl controller;
     float horizontalMove = 0f;
     bool jump = false;
-    public bool inversao;
+    public bool inversao = false;
+    public bool centoEOitenta = false;
     Animator animator;
 
     [Space]
@@ -26,7 +27,15 @@ public class PlayerMovement : MonoBehaviour{
 
 	void Update(){
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        if(Input.GetButtonDown("Jump")){
+        if(!inversao & Input.GetButtonDown("Jump")){
+            SoundManagerScript.PlaySound("jump");
+            jump = true;
+            animator.SetBool("Jump", true);
+        }else if(inversao & Input.GetButtonDown("Crounch") & !centoEOitenta){
+            SoundManagerScript.PlaySound("jump");
+            jump = true;
+            animator.SetBool("Jump", true);
+        }else if(inversao & centoEOitenta & Input.GetButtonDown("Jump")){
             SoundManagerScript.PlaySound("jump");
             jump = true;
             animator.SetBool("Jump", true);
@@ -37,11 +46,9 @@ public class PlayerMovement : MonoBehaviour{
             animator.SetBool("Run", false);
         }
         tempo -= Time.deltaTime * 2;
-        
 	}
 
 	void FixedUpdate(){
-        
         if(!inversao){
             controller.Move(horizontalMove * Time.fixedDeltaTime, false ,jump);
         }else{
@@ -63,8 +70,6 @@ public class PlayerMovement : MonoBehaviour{
                 Debug.Log("Comecou");
                 tempo = 15f;
             }
-
         }
     }
-
 }
