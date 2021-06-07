@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 411559576}
   - component: {fileID: 411559575}
   - component: {fileID: 411559574}
+  - component: {fileID: 411559577}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -401,6 +402,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &411559577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411559573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61281d962d83b940920ec02ca26f620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &656458723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1029,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 0}
+  espelho:
+    serializedVersion: 2
+    m_Bits: 0
+  progress: 0
+  fader: {fileID: 0}
 --- !u!4 &1118399665
 Transform:
   m_ObjectHideFlags: 0
@@ -1159,7 +1177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1413403623
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1714,6 +1732,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: 1258d116efc1a63418b98af852a3d3e4, type: 2}
+  espelho:
+    serializedVersion: 2
+    m_Bits: 0
+  progress: 0
+  fader: {fileID: 0}
 --- !u!1 &2127751304
 GameObject:
   m_ObjectHideFlags: 0

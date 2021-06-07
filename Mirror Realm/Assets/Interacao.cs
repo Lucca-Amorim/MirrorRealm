@@ -30,6 +30,7 @@ public class Interacao : MonoBehaviour{
         Collider2D[] hitEspelho = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, espelho);
         foreach(Collider2D espelho in hitEspelho){
             SceneLoader sceneLoader = scene.GetComponent<SceneLoader>();
+            Debug.Log(espelho.name);
             sceneLoader.cena(espelho.name);
 
         }

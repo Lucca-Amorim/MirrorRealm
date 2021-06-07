@@ -28,39 +28,39 @@ public class SceneLoader : MonoBehaviour{
 
     public void cena(string espelho){
         switch(espelho){
-                case "E1":
-                    Debug.Log("entrando na fase 1");
-                    if(progress == 0){
-                        fader.saida();
-                        SceneManager.LoadSceneAsync(2);
-                    }else{
-                        Debug.Log("Fase ja completada");
-                    }
-                    break;
-                case "E2":
-                    if(progress == 1){
-                        fader.saida();
-                        SceneManager.LoadSceneAsync(3);
-                    }else if(progress < 1) {
-                        Debug.Log("Sem Fragmento de espelho");
-                    }else{
-                        Debug.Log("Fase ja completada");
-                    }
-                    break;
-                case "E3":
-                    if(progress == 2){
-                        fader.saida();
-                        SceneManager.LoadSceneAsync(4);
-                    }else if(progress < 2) {
-                        Debug.Log("Sem Fragmento de espelho");
-                    }else{
-                        Debug.Log("Fase ja completada");
-                    }
-                    break;
-                default:
-                    SceneManager.LoadSceneAsync(1);
-                    break;
-            }
+            case "E1":
+                Debug.Log("entrando na fase 1");
+                if(progress == 0){
+                    fader.saida();
+                    SceneManager.LoadSceneAsync(2);
+                }else{
+                    Debug.Log("Fase ja completada");
+                }
+                break;
+            case "E2":
+                if(progress == 1){
+                    fader.saida();
+                    SceneManager.LoadSceneAsync(3);
+                }else if(progress < 1) {
+                    Debug.Log("Sem Fragmento de espelho");
+                }else{
+                    Debug.Log("Fase ja completada");
+                }
+                break;
+            case "E3":
+                if(progress == 2){
+                    fader.saida();
+                    SceneManager.LoadSceneAsync(4);
+                }else if(progress < 2) {
+                    Debug.Log("Sem Fragmento de espelho");
+                }else{
+                    Debug.Log("Fase ja completada");
+                }
+                break;
+            default:
+                SceneManager.LoadSceneAsync(0);
+                break;
+        }
     }
 
     public void LoadGame(){

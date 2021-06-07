@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.4.10f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,14 +45,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.10f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.10f1\Editor\Data\Managed/UnityEditor.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
      <Compile Include="Assets\Pathfinding\AstarPathfindingProject\Editor\AIBaseEditor.cs" />
      <Compile Include="Assets\Pathfinding\AstarPathfindingProject\Editor\AILerpEditor.cs" />
      <Compile Include="Assets\Pathfinding\AstarPathfindingProject\Editor\AnimationLinkEditor.cs" />
@@ -76,6 +66,18 @@
      <None Include="Assets\Pathfinding\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc" />
      <None Include="Assets\Pathfinding\AstarPathfindingProject\Editor\EditorAssets\Materials\NavmeshOutline.shader" />
      <None Include="Assets\Pathfinding\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Users/jonas/Documents/GitHub/MirrorRealm/Mirror Realm/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Users/jonas/Documents/GitHub/MirrorRealm/Mirror Realm/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TestRunner">
+ <HintPath>C:/Users/jonas/Documents/GitHub/MirrorRealm/Mirror Realm/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>C:/Users/jonas/Documents/GitHub/MirrorRealm/Mirror Realm/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -628,31 +630,19 @@
  <Reference Include="Boo.Lang">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/jonas/Documents/GitHub/MirrorRealm/Mirror Realm/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/jonas/Documents/GitHub/MirrorRealm/Mirror Realm/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/jonas/Documents/GitHub/MirrorRealm/Mirror Realm/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/jonas/Documents/GitHub/MirrorRealm/Mirror Realm/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{4E59FEA9-9F0B-D613-8951-6F7B3A4FD4B9}</Project>
+      <Project>{C44DD2E0-C1DD-3887-2BC1-68171D81166F}</Project>
       <Name>AstarPathfindingProject</Name>
     </ProjectReference>
     <ProjectReference Include="PackageToolsEditor.csproj">
-      <Project>{58ED784F-FB91-0E3C-9260-B081B4414A61}</Project>
+      <Project>{5808967E-B372-0803-E451-9F9F5C108FBD}</Project>
       <Name>PackageToolsEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
